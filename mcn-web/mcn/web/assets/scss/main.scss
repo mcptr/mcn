@@ -1,0 +1,76 @@
+@import "ext/normalize";
+@import "ext/skeleton";
+@import "variables";
+
+@import "feeds";
+
+
+body {
+    margin: 0 5rem;
+    background: $color-bg;
+    color: $color-fg;
+    font-family: "Verdana", "Open Sans", "DejaVu Sans", "sans-serif", "system-ui";
+
+    a {
+	text-decoration: none;
+	font-weight: bold;
+	color: $color-link;
+
+	&:hover {
+	    color: $color-link-hover;
+	}
+    }
+
+    ul.unstyled {
+	list-style-type: none;
+    }
+
+    .layout-header {}
+
+    .layout-main {
+	margin-top: 3rem;
+	min-height: 300px;
+    }
+
+    .layout-footer {
+	margin-top: 4rem;
+	border-top: 1px solid $color-border;
+
+	ul li {
+	    margin-right: 2rem;
+	}
+    }
+    
+    .logo {
+	a {
+	    color: #000;
+	    font-size: 4rem;
+	}
+    }
+
+    .main-menu {
+	border-top: 1px solid $color-border;
+	border-bottom: 1px solid $color-border;
+	margin: 0;
+	padding: 0;
+
+	a {
+	    color: #000;
+	    text-transform: uppercase;
+
+	    &:hover {
+		opacity: 0.5;
+	    }
+	}
+
+	nav ul {
+	    margin: 0;
+
+	    li {
+		display: inline;
+		margin-right: 3rem;
+	    }
+	}
+    }
+}
+

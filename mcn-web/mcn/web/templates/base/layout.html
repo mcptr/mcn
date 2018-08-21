@@ -1,0 +1,42 @@
+{% import "base/macros/ui.jinja2" as _ui %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mechanoia: {{page_title}}</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="layout-header">
+				<div class="row logo">
+					<a href="/">mechanoia</a>
+				</div>
+				{%block layout_header %}
+				<div class="main-menu">
+					<nav>
+						<ul class="unstyled">
+							<li>
+								/ <a href="/">home</a>
+								/ <a href="https://git.metaceptron.com/mcn/blog">blog</a>
+								/ <a href="/feeds/random">random-feed</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				{%endblock%}
+			</div>
+
+			<div class="layout-main">
+				{%block layout_main %}{%endblock%}
+			</div>
+
+			<div class="layout-footer">
+				{%block layout_footer %}
+				{%endblock%}
+			</div>
+		</div>
+	</body>
+</html>

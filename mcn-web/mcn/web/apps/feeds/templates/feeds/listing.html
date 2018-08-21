@@ -1,0 +1,15 @@
+{% extends "feeds/base.html" %}
+
+{% block layout_main %}
+<div class="feeds listing">
+	{% for item in results %}
+	<div class="row feed">
+		<a href="{{item.url}}">{{item.url}}</a>
+	</div>
+	{% endfor %}
+
+	<br/>
+	<br/>
+	{{_ui.pagination(pagination)|safe}}
+</div>
+{% endblock %}

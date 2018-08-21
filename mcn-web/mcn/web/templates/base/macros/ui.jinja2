@@ -1,0 +1,17 @@
+{% macro pagination(config) %}
+	<div class="pagination">
+		{% if config.prev_enabled %}
+			&laquo;
+			<a href="{{url_for(config.endpoint, page_id=config.prev_page_id, **config.params)}}">Prev</a>
+		{% endif %}
+
+		{% if config.prev_enabled and config.next_enabled %}
+			...
+		{% endif %}
+
+		{% if config.next_enabled %}
+			<a href="{{url_for(config.endpoint, page_id=config.next_page_id, **config.params)}}">Next</a>
+			&raquo;
+		{% endif %}
+	</div>
+{% endmacro %}

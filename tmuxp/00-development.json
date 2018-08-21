@@ -1,0 +1,61 @@
+{
+	"session_name": "MCN-DEV",
+	"shell_command_before": [". ~/.venv/bin/activate", ". env.sh"],
+	"windows": [
+		{
+			"panes": [
+				{
+					"shell_command": [
+						"ls -la"
+					]
+				}
+			], 
+			"layout": "tiled", 
+			"window_name": "mcn-project"
+		},
+		{
+			"panes": [
+				{
+					"shell_command": [
+						"cd mcn-web"
+					]
+				}
+			], 
+			"layout": "tiled", 
+			"window_name": "mcn-web"
+		},
+		{
+			"panes": [
+				{
+					"shell_command": [
+						"cd mcn-core"
+					]
+				}
+			], 
+			"layout": "tiled", 
+			"window_name": "mcn-core"
+		},
+		{
+			"panes": [
+				{
+					"shell_command": [
+						"cd mcn-mq"
+					]
+				}
+			], 
+			"layout": "tiled", 
+			"window_name": "mcn-mq"
+		},
+		{
+			"panes": [
+				{
+					"shell_command": [
+						"cd mcn-scraper"
+					]
+				}
+			], 
+			"layout": "tiled", 
+			"window_name": "mcn-scraper"
+		}
+	]
+}

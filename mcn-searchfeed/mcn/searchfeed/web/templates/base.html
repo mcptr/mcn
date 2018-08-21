@@ -1,0 +1,27 @@
+{% macro js_event_data(id, data) %}
+ 	<script>app.event_data["{{id}}"] = {{data|tojson}};</script>  
+{% endmacro %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>mechanoia</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="gen/css/main.css")}}"/>
+	</head>
+	<body>
+		<div class="">
+			<div>
+				<span class="logo">mechanoia</span>
+			</div>
+			<div id="main">
+				{% block main %}
+				{% endblock %}
+			</div>
+		</div>
+
+		<script	src="{{url_for("static", filename="js/jquery-3.3.1.min.js")}}"></script>
+		<script src="{{url_for("static", filename="js/mechanoia.js")}}"></script>
+		{% block js %}{% endblock %}
+	</body>
+</html>
